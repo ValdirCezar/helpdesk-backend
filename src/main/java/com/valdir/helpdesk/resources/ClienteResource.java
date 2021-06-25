@@ -62,21 +62,3 @@ public class ClienteResource {
 	}
 
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
