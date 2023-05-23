@@ -1,0 +1,728 @@
+{
+	"info": {
+		"_postman_id": "734b65a0-1b83-49eb-8654-e8c886e628e2",
+		"name": "HelpDesk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6706069"
+	},
+	"item": [
+		{
+			"name": "Tecnico",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Tecnico 3\",\n    \"cpf\": \"867.475.411-20\",\n    \"email\": \"teste3@test.com\",\n    \"senha\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/tecnicos",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"tecnicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TodosTecnicos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZWMxQGFzc2lzdGVuY2lhLmNvbSIsImV4cCI6MTY2NDk3NjAyNn0.PbPrmeAcdrBLRAbrHfpa5R6-M7efDAj0PEkd3PrSqTeuN0-WdPx0mzEPDfgL-HgYV0P1FtDPM9hwnxjjk7an0w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{lochelpdesk}}/tecnicos",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"tecnicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TecnicoPeloId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/tecnicos/3",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"tecnicos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarTecnico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 1,\n    \"nome\": \"Tecnico 1 AAAAAA\",\n    \"cpf\": \"633.490.050-12\",\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\",\n    \"perfils\": [0],\n    \"dataCriacao\": \"23/09/2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/tecnicos/1",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"tecnicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarTecnico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/tecnicos/3",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"tecnicos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Cliente 5\",\n    \"cpf\": \"473.256.653-32\",\n    \"email\": \"teste3@test.com\",\n    \"senha\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/clientes",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TodosClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/clientes",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClientePeloId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/clientes/4",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id\": 1,\n    \"nome\": \"Tecnico 1 AAAAAA\",\n    \"cpf\": \"633.490.050-12\",\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\",\n    \"perfils\": [0],\n    \"dataCriacao\": \"23/09/2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/clientes/1",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/clientes/1",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chamados",
+			"item": [
+				{
+					"name": "ChamadoPeloId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/chamados/1",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"chamados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TodosChamados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lochelpdesk}}/chamados",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"chamados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criaChamado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prioridade\": 1,\n    \"status\":1,\n    \"titulo\": \"Chamado 1\",\n    \"observacao\": \"Teste chamado 1\",\n    \"tecnico\":1,\n    \"cliente\":1,\n    \"nomeTecnico\": \"Tecnico 1\",\n    \"nomeCliente\": \"Cliente 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/chamados",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"chamados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlterarChamados",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"dataAbertura\": \"23/09/2022\",\n        \"dataFechamento\": null,\n        \"prioridade\": 1,\n        \"status\": 2,\n        \"titulo\": \"Chamado 01\",\n        \"observacao\": \"Primeiro Chamado alterado\",\n        \"tecnico\": 1,\n        \"cliente\": 2\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lochelpdesk}}/chamados/1",
+							"host": [
+								"{{lochelpdesk}}"
+							],
+							"path": [
+								"chamados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "producao",
+			"item": [
+				{
+					"name": "Tecnico Copy",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Tecnico 3\",\n    \"cpf\": \"867.475.411-20\",\n    \"email\": \"teste3@test.com\",\n    \"senha\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{prodHeroku}}tecnicos",
+									"host": [
+										"{{prodHeroku}}tecnicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TodosTecnicos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{prodHeroku}}/tecnicos",
+									"host": [
+										"{{prodHeroku}}"
+									],
+									"path": [
+										"tecnicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TecnicoPeloId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{prodHeroku}}/tecnicos/3",
+									"host": [
+										"{{prodHeroku}}"
+									],
+									"path": [
+										"tecnicos",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AtualizarTecnico",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n    \"id\": 1,\n    \"nome\": \"Tecnico 1 AAAAAA\",\n    \"cpf\": \"633.490.050-12\",\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\",\n    \"perfils\": [0],\n    \"dataCriacao\": \"23/09/2022\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{prodHeroku}}/tecnicos/1",
+									"host": [
+										"{{prodHeroku}}"
+									],
+									"path": [
+										"tecnicos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletarTecnico",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{prodHeroku}}/tecnicos/3",
+									"host": [
+										"{{prodHeroku}}"
+									],
+									"path": [
+										"tecnicos",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cliente Copy",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Cliente 5\",\n    \"cpf\": \"473.256.653-32\",\n    \"email\": \"teste3@test.com\",\n    \"senha\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lochelpdesk}}/clientes",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TodosClientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{lochelpdesk}}/clientes",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ClientePeloId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{lochelpdesk}}/clientes/4",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"clientes",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AtualizarCliente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n    \"id\": 1,\n    \"nome\": \"Tecnico 1 AAAAAA\",\n    \"cpf\": \"633.490.050-12\",\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\",\n    \"perfils\": [0],\n    \"dataCriacao\": \"23/09/2022\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lochelpdesk}}/clientes/1",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletarCliente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{lochelpdesk}}/clientes/1",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Chamados Copy",
+					"item": [
+						{
+							"name": "ChamadoPeloId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{lochelpdesk}}/chamados/1",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"chamados",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TodosChamados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{lochelpdesk}}/chamados",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"chamados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "criaChamado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"prioridade\": 1,\n    \"status\":1,\n    \"titulo\": \"Chamado 1\",\n    \"observacao\": \"Teste chamado 1\",\n    \"tecnico\":1,\n    \"cliente\":1,\n    \"nomeTecnico\": \"Tecnico 1\",\n    \"nomeCliente\": \"Cliente 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lochelpdesk}}/chamados",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"chamados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarChamados",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"dataAbertura\": \"23/09/2022\",\n        \"dataFechamento\": null,\n        \"prioridade\": 1,\n        \"status\": 2,\n        \"titulo\": \"Chamado 01\",\n        \"observacao\": \"Primeiro Chamado alterado\",\n        \"tecnico\": 1,\n        \"cliente\": 2\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lochelpdesk}}/chamados/1",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"chamados",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login Copy",
+					"item": [
+						{
+							"name": "login",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"tec1@assistencia.com\",\n    \"senha\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lochelpdesk}}/login",
+									"host": [
+										"{{lochelpdesk}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "lochelpdesk",
+			"value": "http://localhost:8080"
+		}
+	]
+}
